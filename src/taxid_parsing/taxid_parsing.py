@@ -51,11 +51,13 @@ def set_up_logger(stdout_file):
 
 
 # Get TaxIDs
-def get_taxid(df: pandas.DataFrame, column: int) -> list:
+def get_taxid(df: pandas.DataFrame, col_num: int) -> list:
     """Extract unique taxid from pandas dataframe, ensure column only contains integers.
     Return unique integers as list
     """
-    print(df)
+    # Check column only contains integers
+    all_integers = (df.iloc[:, col_num].dropna() % 1 == 0).all()
+    print(all_integers)
 
 
 # Main function

@@ -10,7 +10,8 @@ import argparse
 import logging
 import sys
 
-import pandas
+import pandas  # type: ignore
+
 # from taxaplease import TaxaPlease
 
 
@@ -50,7 +51,7 @@ def set_up_logger(stdout_file):
 
 
 # Get TaxIDs
-def get_taxid(df: pandas.DataFrame, column: string) -> list:
+def get_taxid(df: pandas.DataFrame, column: int) -> list:
     """Extract unique taxid from pandas dataframe, ensure column only contains integers.
     Return unique integers as list
     """

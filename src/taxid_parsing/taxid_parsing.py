@@ -58,7 +58,7 @@ def get_taxid(df: pandas.DataFrame, col_num: int) -> list:
     # Check column only contains integers
     if (df.iloc[:, col_num].dropna() % 1 == 0).all():
         unique_taxids = df.iloc[:, col_num].unique().tolist()
-        print(unique_taxids)
+        return unique_taxids
 
 
 # Main function
@@ -84,7 +84,7 @@ def main():
     col_num = args.column - 1
 
     # Get TaxID
-    get_taxid(df, col_num)
+    unique_taxids = get_taxid(df, col_num)
 
     # Get species name or higher for taxids
     # Left join Name onto original table

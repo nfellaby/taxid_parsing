@@ -75,7 +75,7 @@ def main():
     )  # Example only - add more informative logging messages
 
     # Read in table (csv/tsv)
-    df = pandas.read_csv(args.input)
+    df = pandas.read_csv(args.input, sep=None)
 
     # Get TaxID
     get_taxid(df, args.column)

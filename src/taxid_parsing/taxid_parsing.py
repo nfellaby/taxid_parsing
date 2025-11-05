@@ -79,8 +79,11 @@ def main():
     # Read in table (csv/tsv)
     df = pandas.read_csv(args.input, sep=None)
 
+    # User supplied column number needs to be 0 start
+    col_num = args.column - 1
+
     # Get TaxID
-    get_taxid(df, args.column)
+    get_taxid(df, col_num)
 
     # Get species name or higher for taxids
     # Left join Name onto original table

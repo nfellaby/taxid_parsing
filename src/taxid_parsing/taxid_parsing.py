@@ -57,7 +57,8 @@ def get_taxid(df: pandas.DataFrame, col_num: int) -> list:
     """
     # Check column only contains integers
     if (df.iloc[:, col_num].dropna() % 1 == 0).all():
-        print(df.iloc[:, col_num])
+        unique_taxids = df.iloc[:, col_num].unique().tolist()
+        print(unique_taxids)
 
 
 # Main function

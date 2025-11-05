@@ -77,7 +77,7 @@ def main():
     )  # Example only - add more informative logging messages
 
     # Read in table (csv/tsv)
-    df = pandas.read_csv(args.input, sep=None)
+    df = pandas.read_csv(args.input, sep=None, engine="python")
 
     # User supplied column number needs to be 0 start
     col_num = args.column - 1

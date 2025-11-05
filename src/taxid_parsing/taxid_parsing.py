@@ -11,7 +11,7 @@ import logging
 import sys
 
 import pandas
-from taxaplease import TaxaPlease
+# from taxaplease import TaxaPlease
 
 
 # Arg parse setup

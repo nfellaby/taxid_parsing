@@ -1,8 +1,8 @@
 [project] # Update all fields in this section
-name = "project-name-here" 
+name = "taxid_parsing" 
 version = "0.1.0" 
-description = "Short description here"
-authors = [{name = "Author name", email = "email.address@example.com"}] 
+description = "Parse TaxID values using TaxaPlease"
+authors = [{name = "Nicholas Ellaby", email = "nfellaby@gmail.com"}] 
 requires-python = ">=3.12" 
 dependencies = ["pandas", "pyyaml", "climb-onyx-client"] 
 
